@@ -108,9 +108,39 @@
       }
       ?>
 
+      <h3>exercice 9</h3>
+      <p>afficher « petite perruche » +n° tant que x(nb aléatoire entre 1 et 100) est <50</p>
 
+      <?php
+      for ($x = rand (1 , 100); $x <=50; $x++) {
+        echo "$x Je suis une perruche <br>";
+      }
+      ?>
 
+      <h3>exercice 10</h3>
+      <p>faire une fonction qui prend en param x, si x==1 als afficher (AAAA), si x==2 (OOOO), x==3(CCCC), x==4(DDDD) sinon (je suis une perruche)</p>
 
+      <?php
+      $x = 4;
+
+      switch ($x) {
+        case '1':
+          echo "AAAA";
+          break;
+        case '2':
+          echo "0000";
+          break;
+        case '3':
+          echo "CCCC";
+          break;
+        case '4':
+          echo "DDDD";
+          break;
+        default:
+          echo 'je suis une perruche';
+          break;
+      }
+?>
 
 
   </body>

@@ -108,7 +108,14 @@
       }
       ?>
 
+      <h3>exercice 9</h3>
+      <p>afficher « petite perruche » +n° tant que x(nb aléatoire entre 1 et 100) est <50</p>
 
+      <?php
+      for ($x = rand (1 , 100); $x <=50; $x++) {
+        echo "$x Je suis une perruche <br>";
+      }
+      ?>
 
 
 
