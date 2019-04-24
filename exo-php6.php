@@ -69,14 +69,22 @@
 
       <h3>exercice 6</h3>
       <p>faire une fonction PGCD=plus grand commun diviseur</p>
-      <p> selon algorithme d'Euclide</p>
+      
 
       <?php
-      $a="20";
-      $b="30";
-
-      $gcd = gmp_gcd($a, $b);
-      echo gmp_strval($gcd) . "\n";
+      function pgcd($nombre,$nombre2){
+   while($nombre>1){
+        $reste = $nombre%$nombre2;
+        if($reste == 0){
+        break; // sorti quand resultat trouvé
+        }
+        $nombre=$nombre2;
+        $nombre2=$reste;
+    }
+return $nombre2; // retourne le resultat
+}
+echo pgcd( 120,420 );
+// Affiche 60
       ?>
 
       <h3>exercice 7</h3>
@@ -91,6 +99,99 @@
         echo "je suis un pioupiou";
       }
       ?>
+
+      <h3>exercice 8</h3>
+      <p>afficher 30 fois « petite perruche » +n°</p>
+
+      <?php
+      for ($x = 0; $x <=30; $x++) {
+        echo "$x Je suis une perruche <br>";
+      }
+      ?>
+
+      <h3>exercice 9</h3>
+      <p>afficher « petite perruche » +n° tant que x(nb aléatoire entre 1 et 100) est <50</p>
+
+      <?php
+      for ($x = rand (1 , 100); $x <=50; $x++) {
+        echo "$x Je suis une perruche <br>";
+      }
+      ?>
+
+      <h3>exercice 10</h3>
+      <p>faire une fonction qui prend en param x, si x==1 als afficher (AAAA), si x==2 (OOOO), x==3(CCCC), x==4(DDDD) sinon (je suis une perruche)</p>
+
+      <?php
+      $x = rand (1 , 5);
+
+      if ($x == 1) {
+        echo "AAAA";
+      } elseif ($x == 2) {
+        echo "0000";
+      } elseif ($x == 3) {
+        echo "CCCC";
+      } elseif ($x == 4) {
+        echo "DDDD";
+      } else {
+        echo 'je suis une perruche';
+      }
+?>
+
+    <h3>exercice 11</h3>
+    <p>10 avec switch/case</p>
+
+    <?php
+    $x = rand (1 , 5);
+
+    switch ($x) {
+      case '1':
+        echo "AAAA";
+        break;
+      case '2':
+        echo "0000";
+        break;
+      case '3':
+        echo "CCCC";
+        break;
+      case '4':
+        echo "DDDD";
+        break;
+      default:
+        echo 'je suis une perruche';
+        break;
+    }
+    ?>
+
+    <h3>exercice 12</h3>
+    <p>si x==1 (x aléatoire entre 1 et 2), include page1.html, sinon include page2.html<br/>
+        > page1 = h1 je suis une perruche<br/>
+        > page2 = h2 j’ai bientôt fini les exos php</p>
+
+        <?php
+        $x = rand (1 , 2);
+
+        switch ($x) {
+          case '1':
+            include 'page1.php';
+            break;
+
+          default:
+            include 'page2.php';
+            break;
+        }
+        ?>
+
+        <h3>exercice 13</h3>
+        <p>générer 10 valeur aléatoire dont chaque valeur sera ajoutée dans un tableau tab</p>
+
+        $lol = array($x = rand(1, 100),$x = rand(1, 100),$x = rand(1, 100),$x = rand(1, 100),$x = rand(1, 100),$x = rand(1, 100),);
+
+
+
+
+
+
+
 
 
 
